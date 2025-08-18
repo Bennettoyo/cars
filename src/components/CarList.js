@@ -13,6 +13,7 @@ const memoizedCars = createSelector(
 function CarList() {
   const dispatch = useDispatch();
   const cars = useSelector(memoizedCars);
+  const name = useSelector((state) => state.form.name);
 
   const handleCarDelete = (car) => {
     dispatch(removeCar(car.id));
